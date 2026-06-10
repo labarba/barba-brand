@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Lorena A. Barba Group — Base Styles
+   v0.1 — base element styling and a few brand utilities, built on the tokens.
+
+   LOAD ORDER MATTERS. tokens.css must load before this file, e.g.:
+     <link rel="stylesheet" href="tokens.css">
+     <link rel="stylesheet" href="base.css">
+   This file references var(--...) defined in tokens.css and will fall back
+   to unstyled defaults if those variables are missing.
+   ========================================================================== */
+
+/* --- Reset (minimal) --- */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, p, figure, ul, ol { margin: 0; }
+
+/* --- Document --- */
+body {
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- Headings (serif) --- */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+h1 { font-size: var(--text-h1); margin-bottom: var(--space-6); }
+h2 { font-size: var(--text-h2); margin-bottom: var(--space-4); margin-top: var(--space-8); }
+h3 { font-size: var(--text-h3); margin-bottom: var(--space-3); margin-top: var(--space-6); }
+
+/* --- Body copy --- */
+p { margin-bottom: var(--space-4); max-width: 70ch; }
+strong, b { font-weight: 700; }
+
+/* --- Links --- */
+a {
+  color: var(--color-red);
+  text-decoration: none;
+}
+a:hover, a:focus, a:active { color: var(--color-red-deep); text-decoration: underline; }
+
+/* --- Rules / dividers --- */
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-hairline);
+  margin: var(--space-8) 0;
+}
+
+/* --- Meta text (dates, captions, copyright) --- */
+small, .meta {
+  font-size: var(--text-meta);
+  color: var(--color-muted);
+}
+
+/* ==========================================================================
+   Brand utilities
+   ========================================================================== */
+
+/* Eyebrow / navigation labels: uppercase, bold, letter-spaced sans */
+.eyebrow, .nav-link {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-size: var(--text-meta);
+}
+.nav-link { color: var(--color-ink); }
+.nav-link:hover, .nav-link:focus { color: var(--color-red); text-decoration: none; }
+
+/* Single-color icons that grey on hover (use on inline SVG with fill) */
+.icon { fill: var(--color-red); transition: fill .15s ease; }
+.icon:hover, a:hover .icon { fill: var(--color-icon-hover); }
+
+/* Card: white surface, hairline border, square corners, flat */
+.card {
+  background: var(--color-paper);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+}
+
+/* Wordmark: "Lorena A." in red, "Barba group" in ink */
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: var(--text-h1);
+  line-height: 1;
+  color: var(--color-ink);   /* default ink for "Barba group" */
+}
+.wordmark .name {
+  font-weight: 400;
+  color: var(--color-red);   /* "Lorena A." */
+}
+.wordmark .group {
+  font-weight: 700;
+  color: var(--color-ink);   /* "Barba group" */
+}
