@@ -18,7 +18,7 @@ Then each surface is a thin translation layer that picks a default position on t
 | Surface | Register default | Tooling reality | Kit contains |
 |---|---|---|---|
 | Site rebuild | Serious chrome, playful in blog/content | Full CSS | The `tokens.css` already drafted; component specs |
-| Course sites (GitHub Pages sites) | Serious, clean | Fixed theme fonts, ~6 colors | A theme recipe plus pre-made branded banner images |
+| Course sites (GitHub Pages sites) | Serious, clean | Full CSS, static | One shared brand stylesheet plus component specs |
 | Slides | Dial per audience | Google Slides or HTML | Master template with a few layouts |
 | Consulting proposals | Serious end | Google Docs / PDF | Cover, type styles, section system |
 | Social / content | Playful end | Canva | Hex list, fonts, the motif, post templates |
