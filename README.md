@@ -1,4 +1,8 @@
-# barba-brand
+# Lorena A. Barba group brand
+
+Brand and design system for the computational research group of Prof. Lorena A. Barba (mechanical and aerospace engineering, the George Washington University). Editorial and restrained: serif-forward and strictly two-color, red and warm black on white.
+
+The system has two tonal registers on one spine: a disciplined, serious default, and a playful, artsy mode that uses red as a full field and a hand-drawn, black-and-white-on-red portrait motif. Default to the serious register unless a project asks otherwise.
 
 The brand extends into two layers, then translate that down into each tool.
 > Keeps one brand with a tonal dial.
