@@ -24,3 +24,6 @@ Then each surface is a thin translation layer that picks a default position on t
 | Social / content | Playful end | Canva | Hex list, fonts, the motif, post templates |
 
 Keep all of it in one versioned repo (DESIGN.md at the root, one folder per kit) for a single source of truth.
+
+- `tokens.css` is a single, authoritative list of the brand's colors, type, and spacing, expressed as CSS so any site can reference `var(--color-red)` instead of hardcoding `#CE2406` everywhere. Change the value once, and everything that uses it updates.
+- `base.css` contains the base styles that use the design tokens (load after `tokens.css`)
